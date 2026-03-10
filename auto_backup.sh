@@ -18,17 +18,17 @@ cd $BACKUP_DIR
 if command -v rsync &> /dev/null; then
     log "使用 rsync 同步..."
     
-    # 同步根目录 MD 文件
-    rsync -av --delete --include='*.md' --exclude='*' $SOURCE_DIR/ ./ 2>/dev/null || true
+    # 同步根目录 MD 文件（排除备份目录特有的文件）
+    rsync -av $SOURCE_DIR/*.md ./ 2>/dev/null || true
     
     # 同步 memory 目录
     mkdir -p memory
     rsync -av --delete $SOURCE_DIR/memory/ memory/ 2>/dev/null || true
     
-    # 同步 scripts
+    # 同步 scripts（排除备份目录特有的脚本）
     mkdir -p scripts
     if [ -d $SOURCE_DIR/arxiv_tracker ]; then
-        rsync -av --delete $SOURCE_DIR/arxiv_tracker/ scripts/ 2>/dev/null || true
+        rsync -av $SOURCE_DIR/arxiv_tracker/*.sh scripts/ 2>/dev/null || true
     fi
     
 else
