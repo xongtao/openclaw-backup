@@ -1,0 +1,41 @@
+[
+  {
+    "id": "http://arxiv.org/abs/2603.06413v1",
+    "title": "A Reference Architecture of Reinforcement Learning Frameworks",
+    "authors": [
+      "Xiaoran Liu",
+      "Istvan David"
+    ],
+    "link": "https://arxiv.org/abs/2603.06413",
+    "summary": "The surge in reinforcement learning (RL) applications gave rise to diverse supporting technology, such as RL frameworks. However, the architectural patterns of these frameworks are inconsistent across...",
+    "score": 50
+  },
+  {
+    "id": "http://arxiv.org/abs/2603.06401v1",
+    "title": "U6G XL-MIMO Radiomap Prediction: Multi-Config Dataset and Beam Map Approach",
+    "authors": [
+      "Xiaojie Li",
+      "Yu Han",
+      "Zhizheng Lu",
+      "Shi Jin",
+      "Chao-Kai Wen"
+    ],
+    "link": "https://arxiv.org/abs/2603.06401",
+    "summary": "The upper 6 GHz (U6G) band with XL-MIMO is a key enabler for sixth-generation wireless systems, yet intelligent radiomap prediction for such systems remains challenging. Existing datasets support only...",
+    "score": 50
+  },
+  {
+    "id": "http://arxiv.org/abs/2603.06545v1",
+    "title": "LiveSense: A Real-Time Wi-Fi Sensing Platform for Range-Doppler on COTS Laptop",
+    "authors": [
+      "Jessica Sanson",
+      "Rahul C. Shah",
+      "Maximilian Pinaroc",
+      "Cagri Tanriover",
+      "Valerio Frascolla"
+    ],
+    "link": "https://arxiv.org/abs/2603.06545",
+    "summary": "We present LiveSense - a cross-platform that transforms a commercial off-the-shelf (COTS) Wi-Fi Network Interface Card (NIC) on a laptop into a centimeter-level Range-Doppler sensor while preserving s...",
+    "score": 50
+  }
+]
