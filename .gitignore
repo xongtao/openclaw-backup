@@ -1,0 +1,40 @@
+# 敏感信息 - 严格排除
+*.key
+*.pem
+*.token
+*.cookie
+.env
+.env.*
+*.secret
+*secret*
+*password*
+*passwd*
+*token*
+*cookie*
+*apikey*
+*api_key*
+
+# 会话和临时文件
+*.session
+*.sess
+/tmp/
+/cache/
+*.tmp
+*.temp
+
+# 依赖和构建产物
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.lock
+
+# 大型文件
+*.tar
+*.gz
+*.zip
+*.rar
+
+# 其他
+.DS_Store
+Thumbs.db
