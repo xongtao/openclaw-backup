@@ -1,81 +1,66 @@
 # HEARTBEAT.md - 定时任务配置
 
-## 📕 任务1：租房发帖定时（⚠️ 已停止）
+## 🧬 任务1：蛋白质设计论文推送（✅ 运行中）
 
-**任务状态**: ❌ **已停止** - cron 配置丢失  
-**执行频率**: 每小时（每小时的00分）  
-**最后执行**: Mar 10 20:00（第5篇）  
-**已停止时长**: 7小时51分钟（跨日期至3月11日）  
-**锁机制**: flock -n /tmp/rent_post.lock  
-**停止原因**: crontab 中缺少任务配置  
+**任务状态**: ✅ **运行中**  
+**执行频率**: 每天 8:00 (北京时间)  
+**目标领域**: 蛋白质设计 + 3D结构融合  
+**推送内容**: 前24小时 arXiv/bioRxiv 新论文  
 
-**第一轮进度（已完成）**:
-- [x] 第1篇：南昌租房🚇地铁口0距离
-- [x] 第2篇：南昌全女生合租👭133平大空间
-- [x] 第3篇：南昌租房🛁主卧带独卫 ✅ 13:00
-- [x] 第4篇：南昌租房☀️阳光房带阳台 ✅ 14:00
-- [x] 第5篇：南昌房东直租📦无中介费 ✅ 15:00
+### 检索关键词
+| 类别 | 关键词 |
+|------|--------|
+| 核心模型 | ESM3, KANZI, ProteinAE, SaProt, ESM-2, ESMFold |
+| 3D结构融合 | structure-conditioned, geometric deep learning, GNN, equivariant |
+| 离散型方法 | VQ-VAE, tokenizer, discrete diffusion, codebook |
+| 连续型方法 | diffusion model, flow matching, RFdiffusion, Chroma |
+| 任务类型 | protein design, inverse folding, sequence-structure co-design |
 
-**第二轮进度（已完成）**:
-- [x] 第1篇：南昌租房🚇地铁口0距离 ✅ 16:00
-- [x] 第2篇：南昌全女生合租👭133平大空间 ✅ 17:00
-- [x] 第3篇：南昌租房🛁主卧带独卫 ✅ 18:00
-- [x] 第4篇：南昌租房☀️阳光房带阳台 ✅ 19:00
-- [x] 第5篇：南昌房东直租📦无中介费 ✅ 20:00
+### 数据源
+- arXiv (cs.LG, cs.AI, q-bio.BM, q-bio.QM)
+- bioRxiv (Bioinformatics, Computational Biology)
+- 检索窗口：过去24小时
 
-**第三轮进度（❌ 未执行）**:
-- [ ] 第1篇：南昌租房🚇地铁口0距离（❌ 21:00 错过）
-- [ ] 第2篇：南昌全女生合租👭133平大空间（❌ 22:00 错过）
-- [ ] 第3篇：南昌租房🛁主卧带独卫（❌ 23:00 错过）
-- [ ] 第4篇：南昌租房☀️阳光房带阳台（❌ 00:00 已错过）
-- [ ] 第5篇：南昌房东直租📦无中介费（❌ 01:00 已错过）
+### 推送格式
+```
+🧬 今日蛋白质设计论文 (YYYY-MM-DD)
 
-**脚本**: `/root/.openclaw/workspace/arxiv_tracker/rent_post_timer.sh`  
-**日志**: `/var/log/rent_post.log`  
+📄 论文1: [标题]
+👤 作者: [第一作者 et al.]
+🏷️ 关键词: [匹配的关键词]
+💡 看点: [一句话总结]
+🔗 链接: [arXiv/bioRxiv URL]
+---
+[更多论文...]
+
+📊 今日统计: 共 N 篇相关论文
+```
+
+**推送方式**: 微信 (WeCom)  
+**接收人**: XiongTao  
+**脚本**: `/root/.openclaw/workspace/paper_tracker/protein_paper_push.sh`  
+**日志**: `/var/log/protein_paper.log`  
 
 ---
 
-## 💬 任务2：南昌租房留言任务（⚠️ 已停止）
+## 📕 任务2：租房发帖定时（⚠️ 已停止）
 
 **任务状态**: ❌ **已停止** - cron 配置丢失  
-**执行频率**: 每20分钟  
-**功能**: 搜索南昌租房/合租帖子 → 留言介绍房子 → 引导查看主页  
-**锁机制**: flock -n /tmp/comment_task.lock  
+（历史记录保留，略）
 
-**搜索关键词**（必须带南昌，精确匹配）:
-- 南昌租房
-- 南昌合租
-- 南昌找室友
-- 南昌女生合租
-- 南昌2号线
-- 南昌火车站
-- 南昌顺外站
-- 南昌地铁口
-- 南昌青山湖
-- 南昌求租
+---
 
-**留言内容**:
-- 介绍顺外站地铁口房子
-- 全女生合租、电梯房
-- 主卧独卫8张、阳台房7张出头
-- 引导查看主页
-- 带皮皮虾专属标记
+## 💬 任务3：南昌租房留言任务（⚠️ 已停止）
 
-**脚本**: `/root/.openclaw/workspace/arxiv_tracker/comment_task.sh`  
-**日志**: `/var/log/comment_task.log`  
-**已留言记录**: `/tmp/xhs_commented.txt`  
+**任务状态**: ❌ **已停止** - cron 配置丢失  
+（历史记录保留，略）
 
 ---
 
 ## 定时配置
 ```
-0 * * * *    # 租房发帖（每小时）
-*/20 * * * * # 留言任务（每20分钟）
+0 8 * * * /root/.openclaw/workspace/paper_tracker/protein_paper_push.sh >> /var/log/protein_paper.log 2>&1
 ```
 
-**开启时间**: 2026-03-10 12:20  
-
----
-
-## 其他任务
-（无）
+**创建时间**: 2026-03-11  
+**负责人**: 皮皮虾 🦐
