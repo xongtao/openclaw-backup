@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "paddleocr-doc-parsing-v2": {
+      "version": "1.0.4",
+      "installedAt": 1776094625124
+    },
+    "minimax-vision-captcha": {
+      "version": "1.0.0",
+      "installedAt": 1776094981772
+    }
+  }
+}
