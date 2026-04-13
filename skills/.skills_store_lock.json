@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "tesseract-ocr": {
+      "name": "Tesseract Ocr",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=tesseract-ocr",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ocr-python": {
+      "name": "OCR with python",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=ocr-python",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "image-ocr": {
+      "name": "Image Ocr",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=image-ocr",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "xhs": {
+      "name": "小红书 - RedNote",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=xhs",
+      "source": "skillhub",
+      "version": "1.2.5"
+    },
+    "xiaohongshu-login": {
+      "name": "小红书登录",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=xiaohongshu-login",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "xiaohongshu-skill": {
+      "name": "小红书skill",
+      "zip_url": "http://lightmake.site/api/v1/download?slug=xiaohongshu-skill",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "cloudbase": {
+      "name": "Cloudbase",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=cloudbase",
+      "source": "skillhub",
+      "version": "1.18.0"
+    }
+  }
+}
