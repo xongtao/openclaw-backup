@@ -6,6 +6,20 @@
 
 ---
 
+## 📋 任务3：配置脚本提醒
+
+**任务状态**: ✅ **已配置并生效**
+
+### 配置信息
+- **脚本**: `/home/ubuntu/.openclaw/workspace/scripts/send_config_reminder.js`
+- **日志**: `/home/ubuntu/.openclaw/workspace/logs/config_reminder.log`
+- **crontab**: `0 18 * * *` (每天 18:00)
+
+### 触发时间
+- **每天 18:00**
+
+---
+
 ## 📋 任务2：每日任务倒计时提醒
 
 **任务状态**: ✅ **已配置并生效**
