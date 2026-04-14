@@ -1,0 +1,42 @@
+{
+  "tasks": [
+    {
+      "id": "fintech_homework",
+      "name": "金融科技课程作业",
+      "deadline": "2026-04-17T23:59:00",
+      "priority": "urgent",
+      "status": "进行中"
+    },
+    {
+      "id": "weekly_group_meeting",
+      "name": "组会",
+      "deadline": "2026-04-16T13:00:00",
+      "recurring": "weekly",
+      "recurringDay": 3,
+      "recurringTime": "13:00",
+      "priority": "high"
+    },
+    {
+      "id": "ethics_homework",
+      "name": "工程伦理课程作业",
+      "deadline": "2026-04-25T23:59:00",
+      "priority": "medium"
+    },
+    {
+      "id": "graphics_dl_survey",
+      "name": "图形学深度学习综述",
+      "deadline": "2026-05-02T23:59:00",
+      "priority": "medium",
+      "notes": "最少3周后"
+    },
+    {
+      "id": "tencent_adtech_competition",
+      "name": "腾讯广告算法大赛",
+      "deadline": "2026-05-14T23:59:00",
+      "priority": "low",
+      "notes": "主题：全模态生成式推荐，冠军200万奖金"
+    }
+  ],
+  "reminderTime": "09:00",
+  "lastReminded": "2026-04-14T09:00:00"
+}
